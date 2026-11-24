@@ -1,0 +1,9 @@
+node_modules/
+**/node_modules/
+**/dist/
+backend/.demo-backups/
+.env
+**/.env
+.postman/
+package-lock.json
+**/package-lock.json

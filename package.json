@@ -1,0 +1,24 @@
+{
+  "name": "campus-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Campus sports teams, tournaments, and live referee scoring",
+  "engines": {
+    "node": "^20.19.0 || ^22.13.0 || >=24"
+  },
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build": "npm --prefix frontend run build",
+    "lint": "eslint frontend/src frontend/vite.config.js backend/src",
+    "seed:demo": "npm --prefix backend run seed:demo",
+    "bootstrap:admin": "npm --prefix backend run bootstrap:admin",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "prettier": "^3.10.1"
+  }
+}

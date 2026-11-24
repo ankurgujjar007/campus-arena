@@ -1,0 +1,552 @@
+/* Shared layout contract. Theme colors live in themes.css. */
+:root {
+  --rail-width: 232px;
+  --page-gutter: clamp(24px, 3vw, 48px);
+  --section-gap: 28px;
+}
+.app-shell {
+  width: calc(100% - var(--rail-width));
+  max-width: 1480px;
+  margin-left: var(--rail-width);
+  padding: 32px var(--page-gutter) 64px;
+}
+.app-shell > *,
+.home-dashboard > *,
+.admin-console-shell > *,
+.match-layout > *,
+.referee-desk-grid > *,
+.admin-grid-two-col > *,
+.tournament-grid > *,
+.team-management-grid > * {
+  min-width: 0;
+}
+.dashboard-nav,
+.admin-tabs {
+  width: var(--rail-width);
+}
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+  margin-bottom: var(--section-gap);
+}
+.dashboard-header > div:first-child {
+  min-width: 0;
+  text-align: left;
+}
+.dashboard-header h1 {
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+.dashboard-header p {
+  margin: 0;
+}
+.header-actions,
+.admin-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.header-avatar-btn {
+  max-width: 240px;
+  min-width: 0;
+}
+.header-user-name {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section-heading,
+.panel-heading,
+.admin-fixtures-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.section-heading > div,
+.panel-heading > div,
+.admin-fixtures-heading > div {
+  min-width: 0;
+}
+.section-heading h2,
+.panel-heading h2,
+.panel-heading h3 {
+  margin-block: 0;
+}
+.home-dashboard,
+.team-management-grid,
+.admin-console-shell {
+  display: grid;
+  gap: var(--section-gap);
+}
+.home-dashboard > *,
+.team-management-grid > * {
+  margin-block: 0;
+}
+.home-section {
+  margin: 0;
+}
+.matchday-cover {
+  margin: 0;
+}
+.home-stats-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.home-stats-grid .stat-card {
+  min-width: 0;
+  padding: 20px 16px;
+}
+.stat-card strong {
+  overflow-wrap: anywhere;
+}
+.tournament-grid {
+  align-items: stretch;
+}
+.tournament-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.tournament-card h3 {
+  overflow-wrap: anywhere;
+}
+.tournament-card-actions {
+  margin-top: auto;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tournament-card-actions > button {
+  flex: 1 1 145px;
+  min-width: 0;
+}
+.tournament-team-picker {
+  margin-bottom: 0;
+}
+.team-row-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.your-teams-grid {
+  mask-image: none;
+  -webkit-mask-image: none;
+  padding: 0 0 12px;
+  scroll-padding-inline: 0;
+}
+.your-team-card {
+  min-width: 0;
+}
+.your-team-card h3,
+.team-search-result strong,
+.community-team-open strong {
+  overflow-wrap: anywhere;
+}
+.team-search-result {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.team-search-result > div:first-child {
+  flex: 1 1 200px;
+  min-width: 0;
+}
+.team-search-controls {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.auth-form label,
+.management-form label,
+.admin-card-form label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.auth-form input,
+.auth-form select,
+.management-form input,
+.management-form select,
+.admin-card-form input,
+.admin-card-form select {
+  width: 100%;
+  min-width: 0;
+}
+.auth-form,
+.management-form,
+.admin-card-form {
+  gap: 18px;
+}
+.score-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.score-inputs > label {
+  min-width: 0;
+}
+.score-inputs input {
+  width: 100%;
+  min-width: 0;
+}
+.score-actions,
+.modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.match-row {
+  min-width: 0;
+  gap: 12px;
+}
+.match-row-teams {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.match-row-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.admin-console-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.admin-console-header > div:first-child {
+  min-width: 0;
+  flex: 1 1 280px;
+}
+.admin-console-header p {
+  overflow-wrap: anywhere;
+}
+.admin-metrics-row {
+  margin-block: 0;
+}
+.admin-item-card .item-header {
+  gap: 12px;
+  align-items: flex-start;
+}
+.admin-item-card .item-header > div {
+  min-width: 0;
+}
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+}
+.admin-tournament-fixture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(150px, 190px);
+  align-items: center;
+  gap: 18px;
+}
+.admin-tournament-fixture > div {
+  min-width: 0;
+}
+.admin-tournament-fixture strong {
+  overflow-wrap: anywhere;
+}
+.admin-tournament-fixture select {
+  width: 100%;
+  min-width: 0;
+}
+.staff-header-controls,
+.staff-filter-row {
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.table-responsive,
+.standings-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+.referee-desk-grid {
+  grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1.8fr);
+}
+.referee-team-event-grid {
+  gap: 16px;
+}
+.referee-team-events {
+  display: flex;
+  flex-direction: column;
+}
+.referee-team-events > h3 {
+  min-height: 40px;
+  margin-block: 8px;
+  overflow-wrap: anywhere;
+}
+.referee-team-events form {
+  flex: 1;
+}
+.referee-team-events fieldset {
+  height: calc(100% - 12px);
+}
+.referee-team-events .referee-roster {
+  margin-top: 12px;
+}
+.modal-backdrop {
+  padding: 24px;
+  overflow-y: auto;
+}
+.modal-card {
+  width: min(100%, 760px);
+  max-width: 100%;
+  max-height: calc(100dvh - 48px);
+  margin: auto;
+  padding: 28px;
+}
+.admin-schedule-dialog {
+  width: min(100%, 520px);
+}
+.modal-header {
+  min-width: 0;
+  padding-right: 52px;
+}
+.modal-header h2 {
+  overflow-wrap: anywhere;
+}
+.modal-header .modal-close-button {
+  top: 0;
+  right: 0;
+}
+.modal-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: visible;
+  gap: 6px;
+}
+.modal-tab {
+  flex: 1 1 125px;
+  white-space: normal;
+}
+.modal-actions {
+  justify-content: flex-end;
+}
+.profile-dropdown-menu {
+  width: min(300px, calc(100vw - 32px));
+}
+.auth-entry .auth-card {
+  width: min(100%, 480px);
+  min-width: 0;
+}
+@media (min-width: 1720px) {
+  .app-shell {
+    margin-right: auto;
+  }
+}
+@media (max-width: 1200px) {
+  :root {
+    --rail-width: 200px;
+    --page-gutter: 24px;
+  }
+  .referee-desk-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .referee-assigned .match-row {
+    max-width: 100%;
+  }
+  .match-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-grid-two-col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 900px) {
+  .home-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .home-stats-grid .stat-card:nth-child(3n) {
+    border-right: 0;
+  }
+  .home-stats-grid .stat-card:nth-child(-n + 3) {
+    border-bottom: 1px solid var(--line);
+  }
+  .tournament-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .admin-tournament-fixture {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .admin-tournament-fixture > label {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+@media (max-width: 760px) {
+  :root {
+    --rail-width: 0px;
+    --page-gutter: 16px;
+    --section-gap: 24px;
+  }
+  .app-shell {
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .dashboard-header {
+    align-items: flex-start;
+  }
+  .dashboard-header > div:first-child {
+    width: 100%;
+  }
+  .dashboard-header .dashboard-brand {
+    justify-content: flex-start;
+    margin-bottom: 18px;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .dashboard-nav,
+  .admin-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 6px;
+    overflow: visible;
+    padding: 6px;
+    margin: 0 0 24px;
+  }
+  .dashboard-nav button,
+  .admin-tab-btn {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
+    padding: 12px;
+    white-space: normal;
+    min-height: 44px;
+  }
+  .dashboard-nav .rail-brand,
+  .dashboard-nav .rail-label,
+  .admin-tabs .rail-brand,
+  .admin-tabs .rail-label {
+    display: none;
+  }
+  .admin-tabs {
+    margin-bottom: 0;
+  }
+  .section-heading {
+    align-items: flex-start;
+  }
+  .panel-heading h2,
+  .section-heading h2 {
+    font-size: 22px;
+  }
+  .admin-card-form,
+  .admin-list-panel,
+  .admin-staff-panel,
+  .referee-assigned,
+  .referee-controls,
+  .your-teams-panel {
+    padding: 20px;
+  }
+  .team-search-controls {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .team-search-result .team-join-actions {
+    width: 100%;
+  }
+  .scoreboard {
+    gap: 10px;
+    padding: 28px 16px;
+  }
+  .score-team {
+    min-width: 0;
+  }
+  .score-team span {
+    overflow-wrap: anywhere;
+  }
+  .score-team strong {
+    font-size: 52px;
+  }
+  .modal-backdrop {
+    padding: 12px;
+  }
+  .modal-card {
+    padding: 20px;
+    max-height: calc(100dvh - 24px);
+  }
+  .modal-header h2 {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+  .modal-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .modal-tab {
+    min-width: 0;
+    padding: 10px 6px;
+    font-size: 12px;
+  }
+  .standings-table {
+    min-width: 480px;
+  }
+  .modal-actions > button {
+    flex: 1 1 140px;
+  }
+  .auth-entry .auth-card {
+    padding: 32px 24px;
+  }
+  .athletics-cover {
+    padding: 28px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .referee-team-event-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .referee-team-events > h3 {
+    min-height: 0;
+  }
+  .score-actions > button {
+    flex: 1 1 100%;
+  }
+  .admin-fixtures-heading > button {
+    max-width: 100%;
+  }
+  .admin-metric {
+    min-width: 0;
+  }
+}
+.admin-list-panel:has(> .admin-tournament-fixture) {
+  gap: 0;
+}
+.admin-list-panel:has(> .admin-tournament-fixture) > .admin-fixtures-heading {
+  margin-bottom: 20px;
+}
+.admin-tournament-fixture + .admin-tournament-fixture {
+  border-top: 0;
+}
+.table-scroll-hint {
+  display: none;
+}
+@media (max-width: 760px) {
+  .sticky-nav-shell {
+    margin-bottom: 24px;
+  }
+  .sticky-nav-shell .dashboard-nav {
+    margin-bottom: 0;
+  }
+  .table-scroll-hint {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+}

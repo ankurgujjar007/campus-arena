@@ -1,0 +1,16 @@
+{
+  "basketball": { "starters": 5, "substitutes": 7 },
+  "basketball 3v3": { "starters": 3, "substitutes": 1 },
+  "football": { "starters": 11, "substitutes": 9 },
+  "cricket": { "starters": 11, "substitutes": 4 },
+  "volleyball": { "starters": 6, "substitutes": 6 },
+  "kabaddi": { "starters": 7, "substitutes": 5 },
+  "hockey": { "starters": 11, "substitutes": 5 },
+  "handball": { "starters": 7, "substitutes": 7 },
+  "badminton": { "starters": 1, "substitutes": 0 },
+  "tennis": { "starters": 1, "substitutes": 0 },
+  "table tennis": { "starters": 1, "substitutes": 0 },
+  "chess": { "starters": 1, "substitutes": 0 },
+  "athletics": { "starters": 1, "substitutes": 0 },
+  "swimming": { "starters": 1, "substitutes": 0 }
+}

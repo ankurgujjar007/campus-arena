@@ -1,0 +1,620 @@
+:root {
+  font-family: 'Manrope Variable', sans-serif;
+  --canvas: #f3f2ee;
+  --surface: #ffffff;
+  --surface-raised: #eceee8;
+  --field: #f8f9f5;
+  --text: #26312b;
+  --heading: #1b2920;
+  --secondary: #46574a;
+  --muted: #586452;
+  --line: #d8dad5;
+  --accent: #294b36;
+  --error: #973f34;
+  --soft: #eef2e7;
+  --hero: #dce8c8;
+  --hero-text: #294b36;
+  --button: #294b36;
+  --button-text: #fff;
+  --button-hover: #1d3b29;
+  --nav: #23352a;
+  --nav-text: #c6d3c0;
+  --nav-muted: #acbda3;
+  --nav-active: #d9ef94;
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  --canvas: #000000;
+  --surface: #101010;
+  --surface-raised: #202020;
+  --field: #161616;
+  --text: #e8e8e8;
+  --heading: #fafafa;
+  --secondary: #d0d0d0;
+  --muted: #aaaaaa;
+  --line: #343434;
+  --accent: #d0e4af;
+  --error: #ffb4a6;
+  --soft: #202020;
+  --hero: #dce8c8;
+  --hero-text: #294b36;
+  --button: #294b36;
+  --button-text: #ffffff;
+  --button-hover: #365c42;
+  --nav: #080808;
+  --nav-text: #cccccc;
+  --nav-muted: #aaaaaa;
+  --nav-active: #d9ef94;
+  color-scheme: dark;
+}
+html,
+body,
+input,
+button,
+select,
+textarea {
+  font-family: 'Manrope Variable', sans-serif;
+}
+body {
+  line-height: 1.65;
+}
+h1,
+h2,
+h3 {
+  font-weight: 650;
+  letter-spacing: -0.045em;
+}
+p,
+label,
+input,
+select,
+textarea,
+button {
+  letter-spacing: 0;
+}
+html,
+body,
+.auth-entry {
+  background: var(--canvas);
+}
+*,
+*::before,
+*::after {
+  border-color: var(--line) !important;
+}
+.panel,
+.card,
+.management-form,
+.modal-card,
+.modal-content,
+.modal-panel,
+.profile-dropdown-menu,
+.admin-metric,
+.admin-item-card,
+.tournament-card,
+.your-team-card,
+.player-directory-card,
+.team-search-result,
+.roster-member-card,
+.team-summary-card,
+.home-stats-grid,
+.home-recent-dropdown,
+.registered-tournament-card,
+.match-row,
+.recent-result,
+.mini-item,
+.admin-notification {
+  background-color: var(--surface);
+  color: var(--text);
+}
+.admin-console-header {
+  background: transparent;
+}
+.admin-schedule-dialog .management-form {
+  background: transparent;
+}
+/* A quiet paper weave comes from the surface tones and fine neutral rules. */
+.panel,
+.tournament-card,
+.your-team-card {
+  background-clip: padding-box;
+}
+.admin-tournament-fixture,
+.admin-item-card {
+  border-bottom: 1px solid var(--line);
+}
+.muted,
+.eyebrow,
+.stats-footnote,
+.field-hint,
+.item-meta,
+.timeline-item-time,
+.stat-card span,
+.admin-metric span,
+.match-row-meta,
+.tournament-card-footer,
+.modal-tab,
+.player-handle,
+.join-reason {
+  color: var(--muted);
+}
+h1,
+h2,
+h3,
+h4,
+.item-header strong {
+  color: var(--heading);
+}
+input:not([type='checkbox']):not([type='radio']),
+select,
+textarea,
+.staff-search-input {
+  background: var(--field);
+  color: var(--text);
+}
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
+}
+select option {
+  background: var(--surface);
+  color: var(--text);
+}
+label {
+  color: var(--secondary);
+  font-size: 13px;
+}
+input,
+select,
+textarea {
+  font-size: 14px;
+}
+.primary-button {
+  background: var(--button);
+  color: var(--button-text);
+  border-color: transparent !important;
+}
+.primary-button:hover {
+  background: var(--button-hover);
+  color: var(--button-text);
+}
+.secondary-button,
+.text-button,
+.edit-profile-btn,
+.theme-toggle,
+.header-avatar-btn,
+.modal-close-button,
+.team-name-button,
+.inline-team-heading-link,
+.profile-dropdown-item {
+  background: transparent;
+  color: var(--text);
+}
+.secondary-button:hover,
+.text-button:hover,
+.edit-profile-btn:hover,
+.header-avatar-btn:hover,
+.profile-dropdown-item:hover,
+.modal-close-button:hover,
+.theme-toggle:hover,
+.your-team-card[role='button']:hover,
+.match-row:hover {
+  background: var(--surface-raised);
+  color: var(--heading);
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.theme-toggle-track {
+  width: 30px;
+  height: 18px;
+  padding: 3px;
+  background: var(--muted);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+}
+.theme-toggle-track > span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.theme-toggle[aria-checked='true'] .theme-toggle-track {
+  justify-content: flex-end;
+  background: var(--accent);
+}
+.auth-card > .theme-toggle {
+  align-self: flex-start;
+  margin-bottom: 28px;
+}
+.admin-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.dashboard-nav,
+.admin-tabs {
+  background: var(--nav);
+}
+.rail-brand strong {
+  color: #f3f5eb;
+}
+.rail-brand small,
+.rail-label {
+  color: var(--nav-muted);
+}
+.dashboard-nav button,
+.admin-tab-btn {
+  color: var(--nav-text);
+  border-color: transparent !important;
+}
+.dashboard-nav button.active,
+.admin-tab-btn.active {
+  background: var(--nav-active);
+  color: #243126;
+}
+.dashboard-nav button.active:hover,
+.admin-tab-btn.active:hover {
+  background: var(--nav-active);
+  color: #243126;
+}
+.matchday-cover {
+  background: var(--hero);
+}
+.matchday-cover h2,
+.cover-score,
+.matchday-cover .eyebrow,
+.matchday-cover p:not(.eyebrow),
+.matchday-cover-aside > span:last-child {
+  color: var(--hero-text);
+}
+.stat-card strong,
+.admin-metric strong,
+.stat-referee {
+  color: var(--accent) !important;
+}
+.score-team strong {
+  font-family: 'Manrope Variable', sans-serif;
+  font-weight: 650;
+  font-size: 68px;
+  letter-spacing: -0.065em;
+}
+.status-label,
+.status-label.large,
+.role-pill,
+.result-badge,
+.team-request-status,
+.count-badge,
+.sport-chip,
+.sport-badge,
+.meta-pill,
+.roster-player-chip,
+.id-pill,
+.inline-tournament-badge,
+.player-avatar,
+.player-avatar-small,
+.filter-pill,
+.action-btn-referee,
+.action-btn-admin,
+.action-btn-manager,
+.action-btn-player,
+.modal-tabs,
+.score-editor,
+.timeline-item,
+.match-timeline-item {
+  background: var(--soft);
+  color: var(--secondary);
+}
+.status-label.live,
+.joined-label,
+.success-message,
+.stat-win,
+.result-win {
+  color: var(--accent);
+}
+.status-label.live {
+  background: var(--soft);
+}
+.feedback,
+.stat-loss,
+.result-loss,
+.team-leave-section > button {
+  color: var(--error);
+}
+.modal-tab.active,
+.filter-pill.active {
+  background: var(--surface);
+  color: var(--accent);
+}
+.admin-users-table th,
+.standings-table th {
+  background: var(--field);
+  color: var(--muted);
+}
+.admin-users-table td,
+.standings-table td {
+  color: var(--text);
+}
+.admin-users-table tr:hover,
+.standings-table tr:hover {
+  background: var(--field);
+}
+.modal-header .modal-close-button,
+.modal-card > .modal-close-button {
+  background: var(--soft);
+  color: var(--text);
+}
+.admin-notification,
+.admin-notification-icon {
+  color: var(--accent);
+}
+.admin-notification.is-error,
+.admin-notification.is-error .admin-notification-icon {
+  color: var(--error);
+}
+.auth-entry .auth-card {
+  background: transparent;
+}
+.auth-entry .auth-card h1 {
+  color: var(--heading);
+}
+.scoreboard,
+.athletics-cover {
+  background: var(--nav);
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--muted);
+  outline-offset: 3px;
+}
+.sticky-nav-shell .dashboard-nav {
+  background: var(--nav);
+}
+.sticky-nav-shell {
+  position: static;
+  padding: 0;
+  margin: 0;
+  isolation: auto;
+}
+body::before {
+  display: block;
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: url('/surface-grain.svg') !important;
+  opacity: 0.035;
+}
+:root[data-theme='dark'] body::before {
+  opacity: 0.025;
+}
+.admin-status-pill {
+  color: var(--muted);
+}
+.registered-tournament-card .match-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.registered-tournament-card .match-row > span:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.registered-tournament-card .status-label {
+  flex-shrink: 0;
+}
+.match-row.selected {
+  background: var(--soft);
+}
+button,
+a,
+input,
+select,
+textarea {
+  transition:
+    color 140ms ease,
+    background-color 140ms ease !important;
+}
+.recent-slide {
+  transition:
+    grid-template-rows 240ms ease,
+    opacity 200ms ease,
+    visibility 240ms !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
+
+:root[data-theme='dark'] .rail-monogram,
+:root[data-theme='dark'] .cover-copy em {
+  color: #d9ef94;
+}
+:root[data-theme='dark'] .dashboard-nav button.active,
+:root[data-theme='dark'] .admin-tab-btn.active,
+:root[data-theme='dark'] .dashboard-nav button.active:hover,
+:root[data-theme='dark'] .admin-tab-btn.active:hover {
+  color: #243126;
+}
+:root[data-theme='dark'] .score-team strong {
+  color: #e2f0ba;
+}
+:root[data-theme='dark'] .status-label.live::before {
+  background: #77bc99;
+}
+:root[data-theme='dark'] body::before {
+  display: none;
+}
+.referee-desk-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.8fr) minmax(0, 1.6fr);
+  gap: 24px;
+  align-items: start;
+}
+.referee-assigned,
+.referee-controls {
+  padding: 24px;
+}
+.referee-assigned h3 {
+  margin-top: 0;
+}
+.referee-assigned .match-row {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  text-align: left;
+  margin-top: 12px;
+  padding: 16px;
+}
+.referee-assigned .status-label {
+  justify-self: start;
+}
+.referee-fixture-time {
+  display: block;
+  color: var(--muted);
+  margin-top: 8px;
+  font-size: 11px;
+}
+.referee-controls fieldset {
+  margin: 24px 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.referee-controls legend {
+  color: var(--heading);
+  padding-inline: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.referee-controls label {
+  display: grid;
+  gap: 8px;
+}
+.referee-controls input,
+.referee-controls select {
+  width: 100%;
+  min-width: 0;
+}
+.referee-controls fieldset:disabled {
+  opacity: 0.6;
+}
+.referee-roster {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.referee-roster summary {
+  cursor: pointer;
+}
+.referee-roster > div {
+  display: grid;
+  gap: 4px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.referee-roster span,
+.referee-roster code {
+  font-size: 12px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.referee-timeline {
+  margin-top: 28px;
+}
+.referee-timeline article {
+  display: grid;
+  gap: 6px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+}
+.referee-timeline small {
+  color: var(--muted);
+}
+.referee-finish-confirm {
+  padding: 16px;
+  background: var(--soft);
+  border-radius: 6px;
+}
+.referee-finish-confirm button {
+  margin: 6px 8px 0 0;
+}
+@media (max-width: 950px) {
+  .referee-desk-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.admin-tournament-fixture > label {
+  display: grid;
+  gap: 6px;
+  min-width: 150px;
+}
+@media (max-width: 760px) {
+  .admin-tournament-fixture {
+    flex-wrap: wrap;
+  }
+  .admin-tournament-fixture > label {
+    width: 100%;
+  }
+}
+.team-join-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+.referee-team-event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+.referee-team-events {
+  min-width: 0;
+}
+.referee-team-events > h3 {
+  font-size: 16px;
+  margin: 12px 0;
+}
+.referee-team-events fieldset {
+  margin-top: 12px;
+  padding: 14px;
+}
+.referee-team-events .muted {
+  font-size: 12px;
+  margin: 0;
+  min-height: 40px;
+}
+.referee-team-events .referee-roster {
+  padding: 12px;
+  font-size: 12px;
+}
+@media (max-width: 640px) {
+  .referee-team-event-grid {
+    grid-template-columns: 1fr;
+  }
+}

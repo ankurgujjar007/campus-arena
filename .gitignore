@@ -1,0 +1,20 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Local configuration (commit templates only)
+.env
+.env.*
+!.env.example
+*.local
+
+# Local database snapshots and editor metadata
+backend/.demo-backups/
+.postman/
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.pid
